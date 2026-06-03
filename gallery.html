@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- Basic -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Gallery - Shinogaya Ayumu Archive</title>
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	
+	<!-- Load Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic' rel='stylesheet'>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/glitche-basic.css" />
+	<link rel="stylesheet" href="assets/css/ionicons.css" />
+	<link rel="stylesheet" href="assets/css/magnific-popup.css" />
+	<link rel="stylesheet" href="assets/css/animate.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/custom.css" />
+	
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
+	
+	<!-- 💡 枠線をピンクに上書き -->
+	<style>
+		.line.top, .line.bottom, .line.left, .line.right {
+			background: #ff70b5 !important;
+		}
+		/* ギャラリー用のカスタムレイアウト */
+		.gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			gap: 15px;
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.gallery-item {
+			background: #eee; /* プレースホルダ */
+			aspect-ratio: 1 / 1; /* 正方形にする */
+			border: 1px solid #ff70b5;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #999;
+			font-size: 12px;
+			overflow: hidden;
+		}
+		.gallery-item img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+		.gallery-item:hover img {
+			transform: scale(1.05); /* ホバー時に少し大きくするグリッチ的な演出 */
+		}
+	</style>
+	
+</head>
+
+<body>	
+	
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="centrize full-width">
+			<div class="vertical-center">
+				<div class="pre-inner">
+					<div class="load typing-load"><p>loading...</p></div>
+					<span class="typed-load"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Container -->
+	<div class="container">
+		
+		<!-- Header -->
+		<header class="fixed left-0 top-[30px] w-full z-[100] text-right bg-white opacity-100 visible">
+			<div class="head-top px-[65px] pt-[30px] pb-[15px]">
+				<a href="#" class="menu-btn"><span></span></a>
+				<div class="top-menu">
+					<ul>
+						<li class="ml-[50px] inline-block align-top"><a href="index.html" class="lnk block mt-[12px]">Home</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="profile.html" class="lnk block mt-[12px]">Profile</a></li>
+						<li class="active ml-[50px] inline-block align-top"><a href="gallery.html" class="lnk block mt-[12px]">Gallery</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="fancam.html" class="lnk block mt-[12px]">Fancam</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="link.html" class="lnk block mt-[12px]">Link</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		
+		<!-- Wrapper -->
+		<div class="wrapper">
+		
+			<!-- 💡 メインコンテンツ：Gallery -->
+			<div class="section started relative z-[97] opacity-100 visible text-center p-0 m-0" style="height: auto; padding: 150px 0 100px;">
+				<div class="centrize full-width">
+					<div class="vertical-center">
+						<div class="started-content inline-block align-middle text-center relative">
+							
+							<div class="h-title text-[40px] font-roboto text-[#141414] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="IMAGE GALLERY">IMAGE <span>GALLERY</span></div>
+							
+							<div class="gallery-grid">
+								<!-- 💡 画像を追加していく場所 -->
+								<!-- プレースホルダ画像をいくつか並べています。assets/images/gallery/ に画像を置いて src を書き換えてください -->
+								<div class="gallery-item"><img src="assets/images/gallery/photo1.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_01'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo2.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_02'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo3.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_03'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo4.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_04'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo5.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_05'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo6.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_06'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo7.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_07'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo8.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_08'"></div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		<!-- Footer -->
+		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full bg-white z-[100] opacity-100 visible">
+			<div class="copy float-left pt-[2px] text-[11px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
+			<div class="clr"></div>
+		</footer>
+		
+		<!-- Lines -->
+		<div class="line top"></div>
+		<div class="line bottom"></div>
+		<div class="line left"></div>
+		<div class="line right"></div>
+		
+	</div>
+	
+	<!-- jQuery Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.validate.js"></script>
+	<script src="assets/js/typed.js"></script>
+	<script src="assets/js/magnific-popup.js"></script>
+	<script src="assets/js/imagesloaded.pkgd.js"></script>
+	<script src="assets/js/isotope.pkgd.js"></script>
+	
+	<!-- Main Scripts -->
+	<script src="assets/js/glitche-scripts.js"></script>
+	
+</body>
+</html>
