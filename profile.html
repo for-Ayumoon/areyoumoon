@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 	
-	<!-- Basic -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Profile - Shinogaya Ayumu Archive</title>
 	
-	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	
 	<!-- Load Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 	
-	<!-- CSS -->
 	<link rel="stylesheet" href="assets/css/glitche-basic.css" />
 	<link rel="stylesheet" href="assets/css/ionicons.css" />
 	<link rel="stylesheet" href="assets/css/magnific-popup.css" />
@@ -20,15 +19,29 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/custom.css" />
 	
-	<!-- Favicons -->
 	<link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
 	
-	<!-- 💡 枠線をピンクに上書き -->
 	<style>
+		/* フォント設定 */
+		body, h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, .h-title, .profile-name-en, .profile-name-ja, .copy {
+			font-family: 'Pixelify Sans', 'DotGothic16', sans-serif !important;
+		}
+		
+		/* 枠線基本色 */
 		.line.top, .line.bottom, .line.left, .line.right {
 			background: #ff70b5 !important;
 		}
-		/* プロフィールページ用のカスタムレイアウト */
+		
+		/* ホバー時の色変更 */
+		a:hover, .top-menu ul li a:hover {
+			color: #ffdc00 !important;
+			transition: color 0.3s ease;
+		}
+		.top-menu ul li.active a {
+			color: #ffdc00 !important;
+		}
+		
+		/* プロフィールレイアウト */
 		.profile-box {
 			display: flex;
 			align-items: flex-start;
@@ -42,26 +55,28 @@
 		.profile-image {
 			width: 250px;
 			height: 250px;
-			background: #eee; /* 画像がない場合のプレースホルダグレー */
-			border: 2px solid #ff70b5; /* ピンクの枠線 */
+			background: #eee;
+			border: 2px solid #ff70b5;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			color: #999;
 			font-size: 12px;
+			transition: border-color 0.3s ease;
+		}
+		.profile-image:hover {
+			border-color: #ffdc00 !important;
 		}
 		.profile-text {
-			font-family: 'Roboto Mono', monospace;
 			color: #141414;
 		}
 		.profile-name-ja {
-			font-size: 32px;
-			font-weight: bold;
+			font-size: 40px;
 			margin-bottom: 5px;
 			letter-spacing: 0.1em;
 		}
 		.profile-name-en {
-			font-size: 16px;
+			font-size: 18px;
 			color: #888;
 			text-transform: uppercase;
 			margin-bottom: 30px;
@@ -69,19 +84,18 @@
 		}
 		.profile-details dl {
 			display: grid;
-			grid-template-columns: 120px 1fr;
+			grid-template-columns: 180px 1fr;
 			gap: 15px 10px;
-			font-size: 14px;
+			font-size: 16px;
 		}
 		.profile-details dt {
 			color: #888;
 			font-weight: normal;
 		}
 		.profile-details dd {
-			font-weight: bold;
 			margin: 0;
 		}
-		/* スマホ対応 */
+		
 		@media (max-width: 768px) {
 			.profile-box {
 				flex-direction: column;
@@ -100,7 +114,6 @@
 
 <body>	
 	
-	<!-- Preloader -->
 	<div class="preloader">
 		<div class="centrize full-width">
 			<div class="vertical-center">
@@ -112,10 +125,8 @@
 		</div>
 	</div>
 	
-	<!-- Container -->
 	<div class="container">
 		
-		<!-- Header -->
 		<header class="fixed left-0 top-[30px] w-full z-[100] text-right bg-white opacity-100 visible">
 			<div class="head-top px-[65px] pt-[30px] pb-[15px]">
 				<a href="#" class="menu-btn"><span></span></a>
@@ -131,22 +142,19 @@
 			</div>
 		</header>
 		
-		<!-- Wrapper -->
 		<div class="wrapper">
 		
-			<!-- 💡 メインコンテンツ：Profile -->
 			<div class="section started relative z-[97] opacity-100 visible text-center p-0 m-0" style="height: auto; padding: 150px 0 100px;">
 				<div class="centrize full-width">
 					<div class="vertical-center">
 						<div class="started-content inline-block align-middle text-center relative">
 							
 							<div class="profile-box">
-								<!-- 左：画像プレースホルダ（後で assets/images/ に画像を置いて src を書き換えてください） -->
+								<!-- 指定の画像ファイル名に変更 -->
 								<div class="profile-image glitch-effect">
-									<img src="assets/images/ayumu_profile.jpg" alt="AYUMU" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.parentNode.textContent='PHOTO PLACEHOLDER'">
+									<img src="assets/images/shinogayaayumu_5.jpg" alt="AYUMU" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.parentNode.textContent='PHOTO'">
 								</div>
 								
-								<!-- 右：テキスト詳細 -->
 								<div class="profile-text">
 									<div class="profile-name-ja glitch-effect" data-text="篠ヶ谷 歩夢">篠ヶ谷 歩夢</div>
 									<div class="profile-name-en">SHINOGAYA AYUMU</div>
@@ -159,7 +167,7 @@
 											<dt>趣味</dt><dd>パスタ研究</dd>
 											<dt>特技</dt><dd>水泳</dd>
 											<dt>MBTI</dt><dd>ISTP</dd>
-											<dt>キーワード</dt><dd>臥薪嘗胆</dd>
+											<dt>私を表すキーワード</dt><dd>臥薪嘗胆</dd>
 										</dl>
 									</div>
 								</div>
@@ -172,13 +180,11 @@
 		
 		</div>
 		
-		<!-- Footer -->
 		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full bg-white z-[100] opacity-100 visible">
-			<div class="copy float-left pt-[2px] text-[11px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
+			<div class="copy float-left pt-[2px] text-[13px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
 			<div class="clr"></div>
 		</footer>
 		
-		<!-- Lines -->
 		<div class="line top"></div>
 		<div class="line bottom"></div>
 		<div class="line left"></div>
@@ -186,15 +192,13 @@
 		
 	</div>
 	
-	<!-- jQuery Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.validate.js"></script>
 	<script src="assets/js/typed.js"></script>
 	<script src="assets/js/magnific-popup.js"></script>
 	<script src="assets/js/imagesloaded.pkgd.js"></script>
 	<script src="assets/js/isotope.pkgd.js"></script>
 	
-	<!-- Main Scripts -->
 	<script src="assets/js/glitche-scripts.js"></script>
 	
 </body>
