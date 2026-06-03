@@ -3,13 +3,11 @@
 <head>
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Shinogaya Ayumu Archive</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
+	<title>Home - Shinogaya Ayumu Archive</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	
-	<!-- Load Fonts (Pixelify Sans & DotGothic16) -->
+	<!-- Load Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
@@ -20,30 +18,93 @@
 	<link rel="stylesheet" href="assets/css/animate.css" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/custom.css" />
-	<link rel="stylesheet" href="assets/css/skills.css" />
 	
 	<link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
 	
 	<style>
-		/* フォント設定（アイコン以外に適用） */
-		body, h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, .h-title, .h-subtitle, .typed-subtitle, .copy {
+		/* フォント設定 */
+		body, h1, h2, h3, h4, h5, h6, p, a, li, .subtitle, .copy {
 			font-family: 'Pixelify Sans', 'DotGothic16', sans-serif !important;
 		}
 		
-		/* ピンクの枠線 */
+		/* 枠線基本色 */
 		.line.top, .line.bottom, .line.left, .line.right {
 			background: #ff70b5 !important;
 		}
 		
-		/* ホバー時の色変更 (#ffdc00) */
-		a, .soc a span {
-			transition: color 0.3s ease;
-		}
-		a:hover, .top-menu ul li a:hover, .soc a:hover span {
+		/* ホバー時の色変更 */
+		a:hover, .top-menu ul li a:hover {
 			color: #ffdc00 !important;
+			transition: color 0.3s ease;
 		}
 		.top-menu ul li.active a {
 			color: #ffdc00 !important;
+		}
+
+		/* =========================================
+		   背景画像（shinogayaayumu_4.jpg）の設定
+		========================================= */
+		.section.started {
+			position: relative;
+			/* 画像を背景に設定し、暗めのマスクを重ねて文字を見やすくする */
+			background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('shinogayaayumu_4.jpg');
+			background-size: cover;
+			/* お顔のポジション（左から48%、上から30%の位置）を基準に固定 */
+			background-position: 48% 30%;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+
+		/* 文字色を白基調にして背景に映えるように調整 */
+		.started_text, .glitch-effect {
+			color: #ffffff !important;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+		}
+		.subtitle {
+			color: #e0e0e0 !important;
+			text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+		}
+		
+		/* =========================================
+		   スマホ用レスポンシブ設定
+		========================================= */
+		@media (max-width: 768px) {
+			header .head-top {
+				padding: 15px 10px !important;
+			}
+			.top-menu ul {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 10px 15px;
+				padding: 0;
+			}
+			.top-menu ul li {
+				margin: 0 !important;
+				display: block;
+			}
+			.top-menu ul li a {
+				font-size: 14px;
+				margin-top: 5px !important;
+			}
+			.menu-btn {
+				display: none !important;
+			}
+			
+			footer {
+				padding: 15px !important;
+				text-align: center;
+			}
+			footer .copy {
+				float: none !important;
+				display: inline-block;
+				font-size: 11px;
+			}
+
+			/* スマホ時の背景の微調整（より確実にお顔にフォーカス） */
+			.section.started {
+				background-position: 46% 25%;
+			}
 		}
 	</style>
 	
@@ -81,27 +142,19 @@
 		
 		<div class="wrapper">
 		
-			<div class="section started relative z-[97] opacity-100 visible text-center p-0 m-0">
+			<div class="section started relative z-[97] h-screen opacity-100 visible text-center p-0 m-0">
 				<div class="centrize full-width">
 					<div class="vertical-center">
 						<div class="started-content inline-block align-middle text-center relative">
-							<div class="h-title text-[68px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[5px] glitch-effect" data-text="SHINOGAYA AYUMU">SHINOGAYA <span>AYUMU</span></div>
 							
-							<div class="h-subtitle text-[15px] typing-subtitle">
-								<p>夢を叶えるとは歩き続けるということ。</p>
-								<p>篠ヶ谷歩夢はうなだれない！</p>
-								<p>沼度724%</p>
-								<p>カワイイ × カッコイイ × 不思議 ＝ 超アイドル！</p>
-								<p>静岡発、うなぎパイダンスで見つかる男。</p>
-								<p>弁当少年団のあの子、もう一度ステージへ。</p>
-								<p>顔面、透明感、想い。全部つよい。</p>
-								<p>歩夢の底なし沼♡ きゅるフェイスとわたあめボイス。</p>
-								<p>仲間思いなリーダーの、ほんわかモーメント。</p>
-								<p>知れば知るほど♡ 憑依型パフォ × 指先まで美しい舞</p>
-								<p>気付いたら、もう抜け出せない。</p>
-								<p>立てば芍薬 座れば牡丹 夢へ歩むは月光花</p>
+							<div class="started_text text-[15px] text-[#999] font-normal uppercase tracking-[0.5em] m-0 p-0">Hello, We Love</div>
+							
+							<div class="h-title text-[68px] text-[#141414] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="AYUMU.S">SHINOGAYA <span>AYUMU</span></div>
+							
+							<div class="subtitle text-[14px] text-[#141414] font-normal uppercase tracking-[0.3em] h-[14px]">
+								<span class="typed-subtitle"></span>
 							</div>
-							<span class="typed-subtitle text-[15px]"></span>
+							
 						</div>
 					</div>
 				</div>
@@ -110,12 +163,6 @@
 		</div>
 		
 		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full bg-white z-[100] opacity-100 visible">
-			<div class="soc float-right">
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://dribbble.com/"><span class="ion ion-social-dribbble text-[17px] text-[#363636]"></span></a>
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://twitter.com/"><span class="ion ion-social-twitter text-[17px] text-[#363636]"></span></a>
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://github.com/"><span class="ion ion-social-github text-[17px] text-[#363636]"></span></a>
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://www.instagram.com/"><span class="ion ion-social-instagram-outline text-[17px] text-[#363636]"></span></a>
-			</div>
 			<div class="copy float-left pt-[2px] text-[13px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
 			<div class="clr"></div>
 		</footer>
@@ -135,6 +182,17 @@
 	<script src="assets/js/isotope.pkgd.js"></script>
 	
 	<script src="assets/js/glitche-scripts.js"></script>
+	
+	<script>
+		$(function(){
+			$(".typed-subtitle").typed({
+				strings: ["DANCER.", "VOCALIST.", "ISTP.", "SHIZUOKA."],
+				typeSpeed: 60,
+				backDelay: 2000,
+				loop: true
+			});
+		});
+	</script>
 	
 </body>
 </html>
