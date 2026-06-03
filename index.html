@@ -18,34 +18,62 @@
 	<link rel="stylesheet" href="assets/css/skills.css" />
 	
 	<style>
-		/* 強制的に背景を表示させるスタイル */
-		body { background: transparent !important; }
+		/* 元のテンプレート背景を透明化 */
+		body, header, footer, .section.started, .container { 
+			background: transparent !important; 
+		}
 		
-		/* ページ全体に背景画像を敷く */
+		/* フォント設定（元の雰囲気を維持） */
+		body, h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, .h-title, .h-subtitle, .typed-subtitle, .copy {
+			font-family: 'Pixelify Sans', 'DotGothic16', sans-serif !important;
+		}
+		
+		/* ページ全体に背景画像を敷く（最背面） */
 		.bg-img-fixed {
 			position: fixed;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
-			z-index: -999; /* 一番後ろに配置 */
+			z-index: -999;
 			object-fit: cover;
+			object-position: 48% 30%; /* 被写体の位置に合わせて調整可能です */
 		}
 
-		/* 元の文字やメニューを維持するための透明化 */
-		header, footer, .section.started, .container {
-			background: transparent !important;
+		/* 文字を見やすくするための暗い半透明マスク（背景画像のすぐ上） */
+		.bg-mask {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.4); /* 0.4の数字を大きくすると暗くなります */
+			z-index: -998;
 		}
 
-		/* 文字が背景と被って見にくい場合の影 */
-		.h-title, .h-subtitle, p, .copy {
-			text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+		/* 文字色を白にして影をつける（視認性確保） */
+		.h-title, .h-title span, .typed-subtitle, .h-subtitle p, .copy {
+			color: #ffffff !important;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+		}
+
+		/* メニューとアイコンの色調整 */
+		.top-menu ul li a, .soc a span {
+			color: #ffffff !important;
+			text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+			transition: color 0.3s ease;
+		}
+		
+		/* ホバー時（マウスカーソルを乗せた時）のアクセントカラー */
+		.top-menu ul li a:hover, .soc a:hover span, .top-menu ul li.active a {
+			color: #ffdc00 !important; /* 歩夢くんに合う色があれば変更してください */
 		}
 	</style>
 </head>
 
 <body>
 	<img src="assets/images/shinogayaayumu_4.jpg" class="bg-img-fixed" alt="Background">
+	<div class="bg-mask"></div>
 
 	<div class="preloader">
 		<div class="centrize full-width">
@@ -104,17 +132,18 @@
 		
 		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full z-[100] opacity-100 visible">
 			<div class="soc float-right">
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://dribbble.com/"><span class="ion ion-social-dribbble text-[17px] text-[#363636]"></span></a>
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://twitter.com/"><span class="ion ion-social-twitter text-[17px] text-[#363636]"></span></a>
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://github.com/"><span class="ion ion-social-github text-[17px] text-[#363636]"></span></a>
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://www.instagram.com/"><span class="ion ion-social-instagram-outline text-[17px] text-[#363636]"></span></a>
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://dribbble.com/"><span class="ion ion-social-dribbble text-[17px]"></span></a>
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://twitter.com/"><span class="ion ion-social-twitter text-[17px]"></span></a>
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://github.com/"><span class="ion ion-social-github text-[17px]"></span></a>
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://www.instagram.com/"><span class="ion ion-social-instagram-outline text-[17px]"></span></a>
 			</div>
-			<div class="copy float-left pt-[2px] text-[13px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
+			<div class="copy float-left pt-[2px] text-[13px]">© Ayumoon. Unofficial fan site.</div>
 			<div class="clr"></div>
 		</footer>
 	</div>
 	
 	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/typed.js"></script>
 	<script src="assets/js/glitche-scripts.js"></script>
 </body>
 </html>
