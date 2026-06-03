@@ -41,7 +41,7 @@
 			color: #ffdc00 !important;
 		}
 		
-		/* プロフィールレイアウト */
+		/* プロフィールレイアウト（PC用） */
 		.profile-box {
 			display: flex;
 			align-items: flex-start;
@@ -63,12 +63,14 @@
 			color: #999;
 			font-size: 12px;
 			transition: border-color 0.3s ease;
+			flex-shrink: 0;
 		}
 		.profile-image:hover {
 			border-color: #ffdc00 !important;
 		}
 		.profile-text {
 			color: #141414;
+			width: 100%;
 		}
 		.profile-name-ja {
 			font-size: 40px;
@@ -96,17 +98,30 @@
 			margin: 0;
 		}
 		
+		/* =========================================
+		   スマホ用レスポンシブ設定
+		========================================= */
 		@media (max-width: 768px) {
-			.profile-box {
-				flex-direction: column;
-				align-items: center;
-				gap: 20px;
-			}
-			.profile-image {
-				width: 100%;
-				max-width: 250px;
-				height: 250px;
-			}
+			/* ヘッダー＆メニューの崩れ防止 */
+			header .head-top { padding: 15px 10px !important; }
+			.top-menu ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; padding: 0; }
+			.top-menu ul li { margin: 0 !important; display: block; }
+			.top-menu ul li a { font-size: 14px; margin-top: 5px !important; }
+			.menu-btn { display: none !important; }
+			
+			/* 余白とフッター調整 */
+			.section.started { padding: 100px 0 100px !important; }
+			footer { padding: 15px !important; text-align: center; }
+			footer .soc { float: none !important; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; }
+			footer .soc a { margin: 0 !important; }
+			footer .copy { float: none !important; display: inline-block; font-size: 11px; }
+
+			/* プロフィール詳細の調整 */
+			.profile-box { flex-direction: column; align-items: center; gap: 20px; padding: 0 15px; }
+			.profile-image { width: 200px; height: 200px; }
+			.profile-name-ja { font-size: 28px; text-align: center; }
+			.profile-name-en { font-size: 14px; text-align: center; margin-bottom: 20px; }
+			.profile-details dl { grid-template-columns: 120px 1fr; gap: 10px; font-size: 14px; width: 100%; }
 		}
 	</style>
 	
@@ -150,7 +165,6 @@
 						<div class="started-content inline-block align-middle text-center relative">
 							
 							<div class="profile-box">
-								<!-- 指定の画像ファイル名に変更 -->
 								<div class="profile-image glitch-effect">
 									<img src="assets/images/shinogayaayumu_5.jpg" alt="AYUMU" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.parentNode.textContent='PHOTO'">
 								</div>
