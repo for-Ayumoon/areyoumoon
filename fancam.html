@@ -73,6 +73,13 @@
 		   スマホ用レスポンシブ設定
 		========================================= */
 		@media (max-width: 768px) {
+			/* テンプレート固有のスクロールロック解除 */
+			html, body, .container, .wrapper {
+				height: auto !important;
+				overflow-y: auto !important;
+				overflow-x: hidden !important;
+			}
+
 			/* ヘッダー＆メニュー */
 			header .head-top { padding: 15px 10px !important; }
 			.top-menu ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; padding: 0; }
@@ -81,9 +88,11 @@
 			.menu-btn { display: none !important; }
 			
 			/* 余白とフッター */
-			.section.started { padding: 100px 0 100px !important; }
+			.section.started { padding: 100px 0 60px !important; }
 			.h-title { font-size: 28px !important; margin-bottom: 30px !important; }
-			footer { padding: 15px !important; text-align: center; }
+			
+			/* フッターの固定配置を解除して最下部に流す */
+			footer { padding: 15px !important; text-align: center; position: relative !important; bottom: 0 !important; margin-top: 40px; }
 			footer .soc { float: none !important; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; }
 			footer .soc a { margin: 0 !important; }
 			footer .copy { float: none !important; display: inline-block; font-size: 11px; }
@@ -132,7 +141,8 @@
 					<div class="vertical-center">
 						<div class="started-content inline-block align-middle text-center relative">
 							
-							<div class="h-title text-[40px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="FANCAM & PERFORMANCE">FANCAM & <span>PERFORMANCE</span></div>
+							<!-- タイトルを「FANCAM」に修正 -->
+							<div class="h-title text-[40px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="FANCAM"><span>FANCAM</span></div>
 							
 							<div class="fancam-grid">
 								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/mWNIpvKlW5U" title="LEAP HIGH!" allowfullscreen></iframe></div>
