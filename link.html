@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 	
-	<!-- Basic -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Link - Shinogaya Ayumu Archive</title>
 	
-	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	
 	<!-- Load Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 	
-	<!-- CSS -->
 	<link rel="stylesheet" href="assets/css/glitche-basic.css" />
 	<link rel="stylesheet" href="assets/css/ionicons.css" />
 	<link rel="stylesheet" href="assets/css/magnific-popup.css" />
@@ -20,15 +19,29 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/custom.css" />
 	
-	<!-- Favicons -->
 	<link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
 	
-	<!-- 💡 枠線をピンクに上書き -->
 	<style>
+		/* フォント設定 */
+		body, h1, h2, h3, h4, h5, h6, p, a, li, .h-title, .link-btn-large, .copy {
+			font-family: 'Pixelify Sans', 'DotGothic16', sans-serif !important;
+		}
+		
+		/* 枠線基本色 */
 		.line.top, .line.bottom, .line.left, .line.right {
 			background: #ff70b5 !important;
 		}
-		/* リンクページ用のカスタムレイアウト（Contactsページの流用） */
+		
+		/* ホバー時の色変更 */
+		a:hover, .top-menu ul li a:hover {
+			color: #ffdc00 !important;
+			transition: color 0.3s ease;
+		}
+		.top-menu ul li.active a {
+			color: #ffdc00 !important;
+		}
+		
+		/* リンクボタンのレイアウト */
 		.links-container {
 			max-width: 600px;
 			margin: 0 auto;
@@ -44,17 +57,17 @@
 			color: #fff;
 			padding: 20px;
 			margin-bottom: 20px;
-			font-family: 'Roboto Mono', monospace;
-			font-size: 18px;
+			font-size: 20px;
 			text-transform: uppercase;
 			letter-spacing: 0.1em;
 			border: 2px solid transparent;
 			transition: all 0.3s ease;
+			text-decoration: none;
 		}
 		.link-btn-large:hover {
-			background: #fff;
-			color: #141414;
-			border-color: #ff70b5; /* ホバーでピンク枠 */
+			background: #141414 !important;
+			color: #ffdc00 !important; /* ホバーで文字も黄色に */
+			border-color: #ffdc00 !important; /* ホバーで黄色枠 */
 		}
 		.link-icon {
 			font-size: 24px;
@@ -65,7 +78,6 @@
 
 <body>	
 	
-	<!-- Preloader -->
 	<div class="preloader">
 		<div class="centrize full-width">
 			<div class="vertical-center">
@@ -77,10 +89,8 @@
 		</div>
 	</div>
 	
-	<!-- Container -->
 	<div class="container">
 		
-		<!-- Header -->
 		<header class="fixed left-0 top-[30px] w-full z-[100] text-right bg-white opacity-100 visible">
 			<div class="head-top px-[65px] pt-[30px] pb-[15px]">
 				<a href="#" class="menu-btn"><span></span></a>
@@ -96,26 +106,25 @@
 			</div>
 		</header>
 		
-		<!-- Wrapper -->
 		<div class="wrapper">
 		
-			<!-- 💡 メインコンテンツ：Link -->
 			<div class="section started relative z-[97] opacity-100 visible text-center p-0 m-0" style="height: auto; padding: 150px 0 100px;">
 				<div class="centrize full-width">
 					<div class="vertical-center">
 						<div class="started-content inline-block align-middle text-center relative">
 							
-							<div class="h-title text-[40px] font-roboto text-[#141414] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="OFFICIAL LINKS">OFFICIAL <span>LINKS</span></div>
+							<div class="h-title text-[40px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="OFFICIAL LINKS">OFFICIAL <span>LINKS</span></div>
 							
 							<div class="links-container">
-								<!-- 💡 href="〜" の中に実際のアカウントURLを入れてください -->
-								<a href="https://www.instagram.com/shinogaya_ayumu/" target="_blank" class="link-btn-large glitch-effect">
+								<!-- 指定のInstagram URL -->
+								<a href="https://www.instagram.com/shinogaya_ayumoon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="link-btn-large glitch-effect">
 									<span class="ion ion-social-instagram link-icon"></span>
 									Instagram
 								</a>
 								
-								<a href="https://www.tiktok.com/@ayumu.shinogaya" target="_blank" class="link-btn-large glitch-effect">
-									<span class="link-icon">♪</span> <!-- TikTokアイコンがないため文字で代用、またはassetsを確認してください -->
+								<!-- 指定のTikTok URL -->
+								<a href="https://www.tiktok.com/@shnamoon?_r=1&_t=ZS-96tLHId9hRo" target="_blank" class="link-btn-large glitch-effect">
+									<span class="link-icon">♪</span>
 									TikTok
 								</a>
 							</div>
@@ -127,13 +136,11 @@
 		
 		</div>
 		
-		<!-- Footer -->
 		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full bg-white z-[100] opacity-100 visible">
-			<div class="copy float-left pt-[2px] text-[11px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
+			<div class="copy float-left pt-[2px] text-[13px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
 			<div class="clr"></div>
 		</footer>
 		
-		<!-- Lines -->
 		<div class="line top"></div>
 		<div class="line bottom"></div>
 		<div class="line left"></div>
@@ -141,15 +148,13 @@
 		
 	</div>
 	
-	<!-- jQuery Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.validate.js"></script>
 	<script src="assets/js/typed.js"></script>
 	<script src="assets/js/magnific-popup.js"></script>
 	<script src="assets/js/imagesloaded.pkgd.js"></script>
 	<script src="assets/js/isotope.pkgd.js"></script>
 	
-	<!-- Main Scripts -->
 	<script src="assets/js/glitche-scripts.js"></script>
 	
 </body>
