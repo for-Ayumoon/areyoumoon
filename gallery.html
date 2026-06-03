@@ -3,7 +3,7 @@
 <head>
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Fancam - Shinogaya Ayumu Archive</title>
+	<title>Gallery - Shinogaya Ayumu Archive</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	
@@ -49,33 +49,37 @@
 			color: #ffdc00 !important;
 		}
 		
-		/* ファンカムレイアウト（PC） */
-		.fancam-grid {
+		/* ギャラリーレイアウト（PC） */
+		.gallery-grid {
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-			gap: 30px;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			gap: 15px;
 			max-width: 1000px;
 			margin: 0 auto;
 			padding: 0 20px;
 		}
-		.fancam-item {
-			position: relative;
-			padding-bottom: 56.25%;
-			height: 0;
-			overflow: hidden;
+		.gallery-item {
+			background: #eee;
+			aspect-ratio: 1 / 1;
 			border: 2px solid #ff70b5;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #999;
+			overflow: hidden;
 			transition: border-color 0.3s ease;
 		}
-		.fancam-item:hover {
+		.gallery-item:hover {
 			border-color: #ffdc00 !important;
 		}
-		.fancam-item iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
+		.gallery-item img {
 			width: 100%;
 			height: 100%;
-			border: 0;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+		.gallery-item:hover img {
+			transform: scale(1.05);
 		}
 
 		/* フッターを最下部に流す（固定解除） */
@@ -109,8 +113,8 @@
 			footer { padding: 15px !important; text-align: center; margin-top: 40px; }
 			footer .copy { float: none !important; display: inline-block; font-size: 11px; }
 
-			/* 動画グリッド（スマホでは縦1列） */
-			.fancam-grid { grid-template-columns: 1fr; gap: 20px; padding: 0 15px; }
+			/* ギャラリー（スマホでは2列） */
+			.gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0 15px; }
 		}
 	</style>
 	
@@ -138,8 +142,8 @@
 					<ul>
 						<li class="ml-[50px] inline-block align-top"><a href="index.html" class="lnk block mt-[12px]">Home</a></li>
 						<li class="ml-[50px] inline-block align-top"><a href="profile.html" class="lnk block mt-[12px]">Profile</a></li>
-						<li class="ml-[50px] inline-block align-top"><a href="gallery.html" class="lnk block mt-[12px]">Gallery</a></li>
-						<li class="active ml-[50px] inline-block align-top"><a href="fancam.html" class="lnk block mt-[12px]">Fancam</a></li>
+						<li class="active ml-[50px] inline-block align-top"><a href="gallery.html" class="lnk block mt-[12px]">Gallery</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="fancam.html" class="lnk block mt-[12px]">Fancam</a></li>
 						<li class="ml-[50px] inline-block align-top"><a href="link.html" class="lnk block mt-[12px]">Link</a></li>
 					</ul>
 				</div>
@@ -153,16 +157,17 @@
 					<div class="vertical-center">
 						<div class="started-content inline-block align-middle text-center relative">
 							
-							<div class="h-title text-[40px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="FANCAM"><span>FANCAM</span></div>
+							<div class="h-title text-[40px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="IMAGE GALLERY">IMAGE <span>GALLERY</span></div>
 							
-							<div class="fancam-grid">
-								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/mWNIpvKlW5U" title="LEAP HIGH!" allowfullscreen></iframe></div>
-								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/3Nq7PGitLOI" title="1分PR" allowfullscreen></iframe></div>
-								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/zOi0HiWZrOc" title="歩数計対決" allowfullscreen></iframe></div>
-								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/3S4rPGIlpL8" title="公約動画" allowfullscreen></iframe></div>
-								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/dDGjFlxTnOw" title="TOXIC" allowfullscreen></iframe></div>
-								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/yZfTEd99lR8" title="SHINE" allowfullscreen></iframe></div>
-								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/1WAF8vkWZWE" title="ファイナル" allowfullscreen></iframe></div>
+							<div class="gallery-grid">
+								<div class="gallery-item"><img src="assets/images/gallery/photo1.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_01'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo2.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_02'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo3.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_03'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo4.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_04'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo5.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_05'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo6.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_06'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo7.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_07'"></div>
+								<div class="gallery-item"><img src="assets/images/gallery/photo8.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_08'"></div>
 							</div>
 
 						</div>
