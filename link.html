@@ -7,7 +7,6 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	
-	<!-- Load Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
@@ -41,7 +40,7 @@
 			color: #ffdc00 !important;
 		}
 		
-		/* リンクボタンのレイアウト */
+		/* リンクボタンのレイアウト（PC） */
 		.links-container {
 			max-width: 600px;
 			margin: 0 auto;
@@ -66,11 +65,36 @@
 		}
 		.link-btn-large:hover {
 			background: #141414 !important;
-			color: #ffdc00 !important; /* ホバーで文字も黄色に */
-			border-color: #ffdc00 !important; /* ホバーで黄色枠 */
+			color: #ffdc00 !important;
+			border-color: #ffdc00 !important;
 		}
 		.link-icon {
 			font-size: 24px;
+		}
+
+		/* =========================================
+		   スマホ用レスポンシブ設定
+		========================================= */
+		@media (max-width: 768px) {
+			/* ヘッダー＆メニュー */
+			header .head-top { padding: 15px 10px !important; }
+			.top-menu ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; padding: 0; }
+			.top-menu ul li { margin: 0 !important; display: block; }
+			.top-menu ul li a { font-size: 14px; margin-top: 5px !important; }
+			.menu-btn { display: none !important; }
+			
+			/* 余白とフッター */
+			.section.started { padding: 100px 0 100px !important; }
+			.h-title { font-size: 28px !important; margin-bottom: 30px !important; }
+			footer { padding: 15px !important; text-align: center; }
+			footer .soc { float: none !important; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; }
+			footer .soc a { margin: 0 !important; }
+			footer .copy { float: none !important; display: inline-block; font-size: 11px; }
+
+			/* リンクボタン調整 */
+			.links-container { padding: 0 15px; }
+			.link-btn-large { font-size: 16px; padding: 15px; gap: 10px; margin-bottom: 15px; }
+			.link-icon { font-size: 20px; }
 		}
 	</style>
 	
@@ -116,13 +140,11 @@
 							<div class="h-title text-[40px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="OFFICIAL LINKS">OFFICIAL <span>LINKS</span></div>
 							
 							<div class="links-container">
-								<!-- 指定のInstagram URL -->
 								<a href="https://www.instagram.com/shinogaya_ayumoon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="link-btn-large glitch-effect">
 									<span class="ion ion-social-instagram link-icon"></span>
 									Instagram
 								</a>
 								
-								<!-- 指定のTikTok URL -->
 								<a href="https://www.tiktok.com/@shnamoon?_r=1&_t=ZS-96tLHId9hRo" target="_blank" class="link-btn-large glitch-effect">
 									<span class="link-icon">♪</span>
 									TikTok
