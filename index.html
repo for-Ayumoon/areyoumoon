@@ -32,13 +32,21 @@
 			background: #ff70b5 !important;
 		}
 		
-		/* ホバー時の色変更 */
-		a:hover, .top-menu ul li a:hover {
+		/* =========================================
+		   ヘッダー・メニューの透過と白文字化
+		========================================= */
+		header {
+			background: transparent !important; /* 白背景を解除 */
+			box-shadow: none !important;
+		}
+		.top-menu ul li a {
+			color: #ffffff !important; /* メニューの文字を白に */
+			text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+		}
+		/* ホバー時とアクティブ時は黄色 */
+		a:hover, .top-menu ul li a:hover, .top-menu ul li.active a {
 			color: #ffdc00 !important;
 			transition: color 0.3s ease;
-		}
-		.top-menu ul li.active a {
-			color: #ffdc00 !important;
 		}
 
 		/* =========================================
@@ -46,23 +54,39 @@
 		========================================= */
 		.section.started {
 			position: relative;
-			/* 画像を背景に設定し、暗めのマスクを重ねて文字を見やすくする */
+			/* 画像の上に40%の黒マスクをかけて文字を読みやすくする */
 			background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('shinogayaayumu_4.jpg');
 			background-size: cover;
-			/* お顔のポジション（左から48%、上から30%の位置）を基準に固定 */
-			background-position: 48% 30%;
+			background-position: 48% 30%; /* お顔の位置 */
 			background-repeat: no-repeat;
 			background-attachment: fixed;
+			height: 100vh !important;
 		}
 
-		/* 文字色を白基調にして背景に映えるように調整 */
-		.started_text, .glitch-effect {
-			color: #ffffff !important;
+		/* メインテキストの装飾 */
+		.started_text {
+			color: #e0e0e0 !important;
 			text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 		}
+		.glitch-effect {
+			color: #ffffff !important;
+			text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+		}
 		.subtitle {
-			color: #e0e0e0 !important;
-			text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+			color: #ffdc00 !important; /* タイピング文字を黄色にしてアクセントに */
+			text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+		}
+
+		/* =========================================
+		   フッターの透過化
+		========================================= */
+		footer {
+			background: transparent !important; /* 白背景を解除 */
+			border: none !important;
+		}
+		footer .copy {
+			color: #e0e0e0 !important; /* コピーライトの文字を明るく */
+			text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 		}
 		
 		/* =========================================
@@ -94,6 +118,7 @@
 			footer {
 				padding: 15px !important;
 				text-align: center;
+				bottom: 15px !important;
 			}
 			footer .copy {
 				float: none !important;
@@ -104,6 +129,11 @@
 			/* スマホ時の背景の微調整（より確実にお顔にフォーカス） */
 			.section.started {
 				background-position: 46% 25%;
+			}
+			
+			/* スマホで文字がはみ出さないようにサイズ調整 */
+			.h-title {
+				font-size: 40px !important;
 			}
 		}
 	</style>
@@ -125,7 +155,7 @@
 	
 	<div class="container">
 		
-		<header class="fixed left-0 top-[30px] w-full z-[100] text-right bg-white opacity-100 visible">
+		<header class="fixed left-0 top-[30px] w-full z-[100] text-right opacity-100 visible">
 			<div class="head-top px-[65px] pt-[30px] pb-[15px]">
 				<a href="#" class="menu-btn"><span></span></a>
 				<div class="top-menu">
@@ -147,11 +177,11 @@
 					<div class="vertical-center">
 						<div class="started-content inline-block align-middle text-center relative">
 							
-							<div class="started_text text-[15px] text-[#999] font-normal uppercase tracking-[0.5em] m-0 p-0">Hello, We Love</div>
+							<div class="started_text text-[15px] font-normal uppercase tracking-[0.5em] m-0 p-0">Hello, We Love</div>
 							
-							<div class="h-title text-[68px] text-[#141414] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="AYUMU.S">SHINOGAYA <span>AYUMU</span></div>
+							<div class="h-title text-[68px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="AYUMU.S">SHINOGAYA <span>AYUMU</span></div>
 							
-							<div class="subtitle text-[14px] text-[#141414] font-normal uppercase tracking-[0.3em] h-[14px]">
+							<div class="subtitle text-[14px] font-normal uppercase tracking-[0.3em] h-[14px]">
 								<span class="typed-subtitle"></span>
 							</div>
 							
@@ -162,8 +192,8 @@
 		
 		</div>
 		
-		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full bg-white z-[100] opacity-100 visible">
-			<div class="copy float-left pt-[2px] text-[13px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
+		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full z-[100] opacity-100 visible">
+			<div class="copy float-left pt-[2px] text-[13px]">© Ayumoon. Unofficial fan site.</div>
 			<div class="clr"></div>
 		</footer>
 		
