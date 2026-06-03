@@ -47,14 +47,15 @@
 			align-items: flex-start;
 			justify-content: center;
 			gap: 40px;
-			max-width: 800px;
+			max-width: 850px;
 			margin: 0 auto;
 			text-align: left;
 			padding: 0 20px;
 		}
 		.profile-image {
-			width: 250px;
-			height: 250px;
+			width: 280px;          /* 枠を少し大きめに拡張 */
+			aspect-ratio: 4 / 5;   /* 添付画像の比率に完全一致 */
+			height: auto;
 			background: #eee;
 			border: 2px solid #ff70b5;
 			display: flex;
@@ -102,23 +103,27 @@
 		   スマホ用レスポンシブ設定
 		========================================= */
 		@media (max-width: 768px) {
-			/* ヘッダー＆メニューの崩れ防止 */
+			html, body, .container, .wrapper {
+				height: auto !important;
+				overflow-y: auto !important;
+				overflow-x: hidden !important;
+			}
+
 			header .head-top { padding: 15px 10px !important; }
 			.top-menu ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; padding: 0; }
 			.top-menu ul li { margin: 0 !important; display: block; }
 			.top-menu ul li a { font-size: 14px; margin-top: 5px !important; }
 			.menu-btn { display: none !important; }
 			
-			/* 余白とフッター調整 */
-			.section.started { padding: 100px 0 100px !important; }
-			footer { padding: 15px !important; text-align: center; }
+			.section started { padding: 100px 0 100px !important; }
+			footer { padding: 15px !important; text-align: center; position: relative !important; bottom: 0 !important; margin-top: 5px; }
 			footer .soc { float: none !important; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; }
 			footer .soc a { margin: 0 !important; }
 			footer .copy { float: none !important; display: inline-block; font-size: 11px; }
 
-			/* プロフィール詳細の調整 */
+			/* スマホ用のプロフィール調整 */
 			.profile-box { flex-direction: column; align-items: center; gap: 20px; padding: 0 15px; }
-			.profile-image { width: 200px; height: 200px; }
+			.profile-image { width: 220px; } /* スマホでも見栄えの良いサイズに拡張 */
 			.profile-name-ja { font-size: 28px; text-align: center; }
 			.profile-name-en { font-size: 14px; text-align: center; margin-bottom: 20px; }
 			.profile-details dl { grid-template-columns: 120px 1fr; gap: 10px; font-size: 14px; width: 100%; }
@@ -166,7 +171,7 @@
 							
 							<div class="profile-box">
 								<div class="profile-image glitch-effect">
-									<img src="assets/images/shinogayaayumu_5.jpg" alt="AYUMU" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.parentNode.textContent='PHOTO'">
+									<img src="shinogayaayumu_5.jpg" alt="AYUMU" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.parentNode.textContent='PHOTO'">
 								</div>
 								
 								<div class="profile-text">
