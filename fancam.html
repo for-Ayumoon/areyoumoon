@@ -48,6 +48,11 @@
 		.top-menu ul li.active a {
 			color: #ffdc00 !important;
 		}
+
+		/* loadingの文字色を黄色に */
+		.typing-load p {
+			color: #ffdc00 !important;
+		}
 		
 		/* ファンカムレイアウト（PC） */
 		.fancam-grid {
@@ -58,6 +63,17 @@
 			margin: 0 auto;
 			padding: 0 20px;
 		}
+
+		/* 小見出しのデザイン */
+		.fancam-subheading {
+			font-size: 26px;
+			font-weight: bold;
+			color: #1a1a1a;
+			margin: 50px 0 20px;
+			letter-spacing: 0.05em;
+			text-align: center;
+		}
+
 		.fancam-item {
 			position: relative;
 			padding-bottom: 56.25%;
@@ -103,7 +119,8 @@
 			
 			/* 余白とタイトル */
 			.section.started { padding: 100px 0 20px !important; }
-			.h-title { font-size: 28px !important; margin-bottom: 30px !important; }
+			.h-title { font-size: 42px !important; margin-bottom: 20px !important; } /* タイトルを少し大きく */
+			.fancam-subheading { font-size: 18px; margin: 40px 0 15px; } /* 小見出しをスマホサイズに */
 			
 			/* スマホ用フッター調整 */
 			footer { padding: 15px !important; text-align: center; margin-top: 40px; }
@@ -153,13 +170,18 @@
 					<div class="vertical-center">
 						<div class="started-content inline-block align-middle text-center relative">
 							
-							<div class="h-title text-[40px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="FANCAM"><span>FANCAM</span></div>
+							<div class="h-title text-[68px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[20px] glitch-effect" data-text="FANCAM"><span>FANCAM</span></div>
 							
+							<h2 class="fancam-subheading">PRODUCE 101 JAPAN SHINSEKAI</h2>
 							<div class="fancam-grid">
 								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/mWNIpvKlW5U" title="LEAP HIGH!" allowfullscreen></iframe></div>
 								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/3Nq7PGitLOI" title="1分PR" allowfullscreen></iframe></div>
 								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/zOi0HiWZrOc" title="歩数計対決" allowfullscreen></iframe></div>
 								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/3S4rPGIlpL8" title="公約動画" allowfullscreen></iframe></div>
+							</div>
+
+							<h2 class="fancam-subheading">PRODUCE 101 JAPAN SEASON2</h2>
+							<div class="fancam-grid">
 								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/dDGjFlxTnOw" title="TOXIC" allowfullscreen></iframe></div>
 								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/yZfTEd99lR8" title="SHINE" allowfullscreen></iframe></div>
 								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/1WAF8vkWZWE" title="ファイナル" allowfullscreen></iframe></div>
