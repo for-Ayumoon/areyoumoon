@@ -21,6 +21,15 @@
 	<link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
 	
 	<style>
+		/* =========================================
+		   PC・スマホ共通：スクロールロックの完全解除
+		========================================= */
+		html, body, .container, .wrapper {
+			height: auto !important;
+			overflow-y: auto !important;
+			overflow-x: hidden !important;
+		}
+
 		/* フォント設定 */
 		body, h1, h2, h3, h4, h5, h6, p, a, li, .h-title, .copy {
 			font-family: 'Pixelify Sans', 'DotGothic16', sans-serif !important;
@@ -69,17 +78,22 @@
 			border: 0;
 		}
 
+		/* フッターを最下部に流す（固定解除） */
+		footer {
+			position: relative !important;
+			bottom: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			padding: 30px 65px !important;
+			margin-top: 60px;
+			background: white;
+			z-index: 100;
+		}
+
 		/* =========================================
 		   スマホ用レスポンシブ設定
 		========================================= */
 		@media (max-width: 768px) {
-			/* テンプレート固有のスクロールロック解除 */
-			html, body, .container, .wrapper {
-				height: auto !important;
-				overflow-y: auto !important;
-				overflow-x: hidden !important;
-			}
-
 			/* ヘッダー＆メニュー */
 			header .head-top { padding: 15px 10px !important; }
 			.top-menu ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; padding: 0; }
@@ -87,14 +101,12 @@
 			.top-menu ul li a { font-size: 14px; margin-top: 5px !important; }
 			.menu-btn { display: none !important; }
 			
-			/* 余白とフッター */
-			.section.started { padding: 100px 0 60px !important; }
+			/* 余白とタイトル */
+			.section.started { padding: 100px 0 20px !important; }
 			.h-title { font-size: 28px !important; margin-bottom: 30px !important; }
 			
-			/* フッターの固定配置を解除して最下部に流す */
-			footer { padding: 15px !important; text-align: center; position: relative !important; bottom: 0 !important; margin-top: 40px; }
-			footer .soc { float: none !important; margin-bottom: 10px; display: flex; justify-content: center; gap: 15px; }
-			footer .soc a { margin: 0 !important; }
+			/* スマホ用フッター調整 */
+			footer { padding: 15px !important; text-align: center; margin-top: 40px; }
 			footer .copy { float: none !important; display: inline-block; font-size: 11px; }
 
 			/* 動画グリッド（スマホでは縦1列） */
@@ -136,12 +148,11 @@
 		
 		<div class="wrapper">
 		
-			<div class="section started relative z-[97] opacity-100 visible text-center p-0 m-0" style="height: auto; padding: 150px 0 100px;">
+			<div class="section started relative z-[97] opacity-100 visible text-center p-0 m-0" style="height: auto; padding: 150px 0 0px;">
 				<div class="centrize full-width">
 					<div class="vertical-center">
 						<div class="started-content inline-block align-middle text-center relative">
 							
-							<!-- タイトルを「FANCAM」に修正 -->
 							<div class="h-title text-[40px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="FANCAM"><span>FANCAM</span></div>
 							
 							<div class="fancam-grid">
@@ -161,7 +172,7 @@
 		
 		</div>
 		
-		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full bg-white z-[100] opacity-100 visible">
+		<footer class="fixed">
 			<div class="copy float-left pt-[2px] text-[13px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
 			<div class="clr"></div>
 		</footer>
