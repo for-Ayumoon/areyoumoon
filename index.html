@@ -25,9 +25,43 @@
 	<link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
 	
 	<style>
-		/* フォント設定（アイコン以外に適用） */
+		/* 元のフォント設定を維持 */
 		body, h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, .h-title, .h-subtitle, .typed-subtitle, .copy {
 			font-family: 'Pixelify Sans', 'DotGothic16', sans-serif !important;
+		}
+		
+		/* テンプレートの白背景を透過し、背景画像を表示 */
+		header, footer, .section.started {
+			background: transparent !important;
+		}
+
+		/* 画像の配置（最背面へ） */
+		.bg-img-fixed {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			object-fit: cover;
+			object-position: 48% 30%;
+		}
+
+		/* 文字を見やすくするためのマスク */
+		.bg-mask {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.3);
+			z-index: -1;
+		}
+
+		/* 文字色を白にして視認性を確保 */
+		.h-title, .h-title span, .typed-subtitle, .h-subtitle p {
+			color: #ffffff !important;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 		}
 		
 		/* ピンクの枠線 */
@@ -35,7 +69,7 @@
 			background: #ff70b5 !important;
 		}
 		
-		/* ホバー時の色変更 (#ffdc00) */
+		/* ホバー時の色変更 */
 		a, .soc a span {
 			transition: color 0.3s ease;
 		}
@@ -50,6 +84,9 @@
 </head>
 
 <body>	
+	<!-- 背景画像とマスクを追加 -->
+	<img src="shinogayaayumu_4.jpg" class="bg-img-fixed" alt="Background">
+	<div class="bg-mask"></div>
 	
 	<div class="preloader">
 		<div class="centrize full-width">
@@ -64,7 +101,7 @@
 	
 	<div class="container">
 		
-		<header class="fixed left-0 top-[30px] w-full z-[100] text-right bg-white opacity-100 visible">
+		<header class="fixed left-0 top-[30px] w-full z-[100] text-right opacity-100 visible">
 			<div class="head-top px-[65px] pt-[30px] pb-[15px]">
 				<a href="#" class="menu-btn"><span></span></a>
 				<div class="top-menu">
@@ -87,6 +124,7 @@
 						<div class="started-content inline-block align-middle text-center relative">
 							<div class="h-title text-[68px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[5px] glitch-effect" data-text="SHINOGAYA AYUMU">SHINOGAYA <span>AYUMU</span></div>
 							
+							<!-- 元のキャッチコピー構成をそのまま残しました -->
 							<div class="h-subtitle text-[15px] typing-subtitle">
 								<p>夢を叶えるとは歩き続けるということ。</p>
 								<p>篠ヶ谷歩夢はうなだれない！</p>
@@ -109,14 +147,14 @@
 		
 		</div>
 		
-		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full bg-white z-[100] opacity-100 visible">
+		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full z-[100] opacity-100 visible">
 			<div class="soc float-right">
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://dribbble.com/"><span class="ion ion-social-dribbble text-[17px] text-[#363636]"></span></a>
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://twitter.com/"><span class="ion ion-social-twitter text-[17px] text-[#363636]"></span></a>
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://github.com/"><span class="ion ion-social-github text-[17px] text-[#363636]"></span></a>
-				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://www.instagram.com/"><span class="ion ion-social-instagram-outline text-[17px] text-[#363636]"></span></a>
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://dribbble.com/"><span class="ion ion-social-dribbble text-[17px] text-[#ffffff]"></span></a>
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://twitter.com/"><span class="ion ion-social-twitter text-[17px] text-[#ffffff]"></span></a>
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://github.com/"><span class="ion ion-social-github text-[17px] text-[#ffffff]"></span></a>
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://www.instagram.com/"><span class="ion ion-social-instagram-outline text-[17px] text-[#ffffff]"></span></a>
 			</div>
-			<div class="copy float-left pt-[2px] text-[13px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
+			<div class="copy float-left pt-[2px] text-[13px] text-[#ffffff]">© Ayumoon. Unofficial fan site.</div>
 			<div class="clr"></div>
 		</footer>
 		
