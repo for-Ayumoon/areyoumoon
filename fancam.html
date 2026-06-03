@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 	
-	<!-- Basic -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Fancam - Shinogaya Ayumu Archive</title>
 	
-	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	
 	<!-- Load Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 	
-	<!-- CSS -->
 	<link rel="stylesheet" href="assets/css/glitche-basic.css" />
 	<link rel="stylesheet" href="assets/css/ionicons.css" />
 	<link rel="stylesheet" href="assets/css/magnific-popup.css" />
@@ -20,15 +19,29 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/custom.css" />
 	
-	<!-- Favicons -->
 	<link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
 	
-	<!-- 💡 枠線をピンクに上書き -->
 	<style>
+		/* フォント設定 */
+		body, h1, h2, h3, h4, h5, h6, p, a, li, .h-title, .copy {
+			font-family: 'Pixelify Sans', 'DotGothic16', sans-serif !important;
+		}
+		
+		/* 枠線基本色 */
 		.line.top, .line.bottom, .line.left, .line.right {
 			background: #ff70b5 !important;
 		}
-		/* ファンカム（YouTube）用のカスタムレイアウト */
+		
+		/* ホバー時の色変更 */
+		a:hover, .top-menu ul li a:hover {
+			color: #ffdc00 !important;
+			transition: color 0.3s ease;
+		}
+		.top-menu ul li.active a {
+			color: #ffdc00 !important;
+		}
+		
+		/* ファンカムレイアウト */
 		.fancam-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -39,10 +52,14 @@
 		}
 		.fancam-item {
 			position: relative;
-			padding-bottom: 56.25%; /* 16:9のアスペクト比 */
+			padding-bottom: 56.25%;
 			height: 0;
 			overflow: hidden;
 			border: 2px solid #ff70b5;
+			transition: border-color 0.3s ease;
+		}
+		.fancam-item:hover {
+			border-color: #ffdc00 !important; /* ホバーで黄色枠 */
 		}
 		.fancam-item iframe {
 			position: absolute;
@@ -54,7 +71,7 @@
 		}
 		@media (max-width: 768px) {
 			.fancam-grid {
-				grid-template-columns: 1fr; /* スマホでは縦一列 */
+				grid-template-columns: 1fr;
 			}
 		}
 	</style>
@@ -63,7 +80,6 @@
 
 <body>	
 	
-	<!-- Preloader -->
 	<div class="preloader">
 		<div class="centrize full-width">
 			<div class="vertical-center">
@@ -75,10 +91,8 @@
 		</div>
 	</div>
 	
-	<!-- Container -->
 	<div class="container">
 		
-		<!-- Header -->
 		<header class="fixed left-0 top-[30px] w-full z-[100] text-right bg-white opacity-100 visible">
 			<div class="head-top px-[65px] pt-[30px] pb-[15px]">
 				<a href="#" class="menu-btn"><span></span></a>
@@ -94,19 +108,16 @@
 			</div>
 		</header>
 		
-		<!-- Wrapper -->
 		<div class="wrapper">
 		
-			<!-- 💡 メインコンテンツ：Fancam -->
 			<div class="section started relative z-[97] opacity-100 visible text-center p-0 m-0" style="height: auto; padding: 150px 0 100px;">
 				<div class="centrize full-width">
 					<div class="vertical-center">
 						<div class="started-content inline-block align-middle text-center relative">
 							
-							<div class="h-title text-[40px] font-roboto text-[#141414] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="FANCAM & PERFORMANCE">FANCAM & <span>PERFORMANCE</span></div>
+							<div class="h-title text-[40px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[50px] glitch-effect" data-text="FANCAM & PERFORMANCE">FANCAM & <span>PERFORMANCE</span></div>
 							
 							<div class="fancam-grid">
-								<!-- 💡 前回いただいたYouTube動画（埋め込み形式に変換しています） -->
 								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/mWNIpvKlW5U" title="LEAP HIGH!" allowfullscreen></iframe></div>
 								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/3Nq7PGitLOI" title="1分PR" allowfullscreen></iframe></div>
 								<div class="fancam-item"><iframe src="https://www.youtube.com/embed/zOi0HiWZrOc" title="歩数計対決" allowfullscreen></iframe></div>
@@ -123,13 +134,11 @@
 		
 		</div>
 		
-		<!-- Footer -->
 		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full bg-white z-[100] opacity-100 visible">
-			<div class="copy float-left pt-[2px] text-[11px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
+			<div class="copy float-left pt-[2px] text-[13px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
 			<div class="clr"></div>
 		</footer>
 		
-		<!-- Lines -->
 		<div class="line top"></div>
 		<div class="line bottom"></div>
 		<div class="line left"></div>
@@ -137,15 +146,13 @@
 		
 	</div>
 	
-	<!-- jQuery Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.validate.js"></script>
 	<script src="assets/js/typed.js"></script>
 	<script src="assets/js/magnific-popup.js"></script>
 	<script src="assets/js/imagesloaded.pkgd.js"></script>
 	<script src="assets/js/isotope.pkgd.js"></script>
 	
-	<!-- Main Scripts -->
 	<script src="assets/js/glitche-scripts.js"></script>
 	
 </body>
