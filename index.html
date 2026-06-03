@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,7 +9,10 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic' rel='stylesheet'>
+	<!-- Load Fonts (Pixelify Sans & DotGothic16) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 	
 	<link rel="stylesheet" href="assets/css/glitche-basic.css" />
 	<link rel="stylesheet" href="assets/css/ionicons.css" />
@@ -22,8 +25,25 @@
 	<link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
 	
 	<style>
+		/* フォント設定（アイコン以外に適用） */
+		body, h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, .h-title, .h-subtitle, .typed-subtitle, .copy {
+			font-family: 'Pixelify Sans', 'DotGothic16', sans-serif !important;
+		}
+		
+		/* ピンクの枠線 */
 		.line.top, .line.bottom, .line.left, .line.right {
 			background: #ff70b5 !important;
+		}
+		
+		/* ホバー時の色変更 (#ffdc00) */
+		a, .soc a span {
+			transition: color 0.3s ease;
+		}
+		a:hover, .top-menu ul li a:hover, .soc a:hover span {
+			color: #ffdc00 !important;
+		}
+		.top-menu ul li.active a {
+			color: #ffdc00 !important;
 		}
 	</style>
 	
@@ -65,9 +85,9 @@
 				<div class="centrize full-width">
 					<div class="vertical-center">
 						<div class="started-content inline-block align-middle text-center relative">
-							<div class="h-title text-[68px] font-roboto text-[#141414] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[5px] glitch-effect" data-text="SHINOGAYA AYUMU">SHINOGAYA <span>AYUMU</span></div>
+							<div class="h-title text-[68px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[5px] glitch-effect" data-text="SHINOGAYA AYUMU">SHINOGAYA <span>AYUMU</span></div>
 							
-							<div class="h-subtitle text-[13px] typing-subtitle">
+							<div class="h-subtitle text-[15px] typing-subtitle">
 								<p>夢を叶えるとは歩き続けるということ。</p>
 								<p>篠ヶ谷歩夢はうなだれない！</p>
 								<p>沼度724%</p>
@@ -81,7 +101,7 @@
 								<p>気付いたら、もう抜け出せない。</p>
 								<p>立てば芍薬 座れば牡丹 夢へ歩むは月光花</p>
 							</div>
-							<span class="typed-subtitle text-[13px]"></span>
+							<span class="typed-subtitle text-[15px]"></span>
 						</div>
 					</div>
 				</div>
@@ -96,7 +116,7 @@
 				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://github.com/"><span class="ion ion-social-github text-[17px] text-[#363636]"></span></a>
 				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://www.instagram.com/"><span class="ion ion-social-instagram-outline text-[17px] text-[#363636]"></span></a>
 			</div>
-			<div class="copy float-left pt-[2px] text-[11px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
+			<div class="copy float-left pt-[2px] text-[13px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
 			<div class="clr"></div>
 		</footer>
 		
