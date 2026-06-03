@@ -69,18 +69,20 @@
 			padding: 0 20px;
 		}
 		.gallery-item {
-			/* 強制的な正方形設定を削除 */
 			border: 2px solid #ff70b5;
 			transition: border-color 0.3s ease;
 			overflow: hidden; /* ホバー時の拡大用 */
+			display: block;
+			background: #eee; /* 読み込み前の背景色 */
+			min-height: 200px; /* 万が一の画像切れ時も潰れないように最低限の高さを確保 */
 		}
 		.gallery-item:hover {
 			border-color: #ffdc00 !important;
 		}
 		.gallery-item img {
+			display: block;
 			width: 100%;
-			/* 高さ固定と切り取り設定を削除 */
-			display: block; /* 余分なスペースを排除 */
+			height: auto; /* 縦横比を維持して表示（見切れ防止） */
 			transition: transform 0.3s ease;
 		}
 		.gallery-item:hover img {
@@ -112,8 +114,8 @@
 			
 			/* 余白とタイトル */
 			.section.started { padding: 100px 0 20px !important; }
-			.h-title { font-size: 42px !important; margin-bottom: 20px !important; } /* タイトルを少し大きく */
-			.gallery-subheading { font-size: 18px; margin: 40px 0 15px; } /* 小見出しをスマホサイズに */
+			.h-title { font-size: 42px !important; margin-bottom: 20px !important; }
+			.gallery-subheading { font-size: 18px; margin: 40px 0 15px; }
 			
 			/* スマホ用フッター調整 */
 			footer { padding: 15px !important; text-align: center; margin-top: 40px; }
@@ -121,6 +123,7 @@
 
 			/* ギャラリー（スマホでは2列） */
 			.gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0 15px; }
+			.gallery-item { min-height: 120px; } /* スマホ用の潰れ防止サイズ */
 		}
 	</style>
 	
@@ -167,17 +170,27 @@
 							
 							<h2 class="gallery-subheading">PRODUCE 101 JAPAN SHINSEKAI</h2>
 							<div class="gallery-grid">
-								<div class="gallery-item"><img src="assets/images/shinogayaayumu_1.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_01'"></div>
-								<div class="gallery-item"><img src="assets/images/shinogayaayumu_2.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_02'"></div>
-								<div class="gallery-item"><img src="assets/images/shinogayaayumu_3.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_03'"></div>
-								<div class="gallery-item"><img src="assets/images/shinogayaayumu_4.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_04'"></div>
-								<div class="gallery-item"><img src="assets/images/shinogayaayumu_5.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_05'"></div>
-								<div class="gallery-item"><img src="assets/images/shinogayaayumu_6.jpg" onerror="this.style.display='none'; this.parentNode.textContent='IMG_06'"></div>
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_1.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_2.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_3.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_4.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_5.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_6.jpg"></div>
 							</div>
 
 							<h2 class="gallery-subheading">PRODUCE 101 JAPAN SEASON2</h2>
 							<div class="gallery-grid">
-								<div class="gallery-item"><img src="assets/images/image_4.png"></div> <div class="gallery-item"><img src="assets/images/image_5.png"></div> <div class="gallery-item"><img src="assets/images/image_6.png"></div> <div class="gallery-item"><img src="assets/images/image_7.png"></div> <div class="gallery-item"><img src="assets/images/image_8.png"></div> <div class="gallery-item"><img src="assets/images/image_9.png"></div> <div class="gallery-item"><img src="assets/images/image_10.png"></div> <div class="gallery-item"><img src="assets/images/image_11.png"></div> <div class="gallery-item"><img src="assets/images/image_12.png"></div> <div class="gallery-item"><img src="assets/images/image_13.png"></div> </div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_1.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_2.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_3.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_4.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_5.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_6.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_7.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_8.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_9.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_10.jpg"></div>
+							</div>
 
 						</div>
 					</div>
